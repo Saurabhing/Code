@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Playback Speed Calculator - PureTables.com</title>
+    <meta name="description" content="Calculate the video or podcast length with the given playback speed."/>
+    <link rel="canonical" href="https://saurabhing.github.io/">
+    <meta property="og:image" content="https://puretables.com/assets/images/og-image.png"/>
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:title" content="Saur Playback Calculator">
+    <meta property="og:description" content="Calculate the video or podcast length with the given playback speed.">
+    <meta property="og:site_name" content="PureTables.com" />
+    <meta name="twitter:title" content="Saur Playback Calculator">
+    <meta name="twitter:description" content="Calculate the video or podcast length with the given playback speed.">
+    <meta name="twitter:image" content="https://puretables.com/assets/images/og-image.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://puretables.com/assets/extra/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://puretables.com/assets/extra/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://puretables.com/assets/extra/favicon-16x16.png">
+    <link rel="manifest" href="https://puretables.com/assets/extra/site.webmanifest">
+    <link rel="shortcut icon" href="https://puretables.com/assets/extra/favicon.ico">
+    <meta name="msapplication-TileColor" content="#0369f6">
+    <meta name="msapplication-config" content="https://puretables.com/assets/extra/browserconfig.xml">
+    <meta name="theme-color" content="#0369f6">
+    <link rel="stylesheet" href="https://puretables.com/assets/css/optfw.min.css"/>
+    <link rel="stylesheet" href="https://puretables.com/assets/css/style4v3.min.css"/>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6962210495069285" crossorigin="anonymous"></script>
+    </head>
+  <body>
+  
+<nav class="navbar sticky-nav">
+    <div class="container">
+    <div class="navbar-content">
+        <a class="navbar-logo" href="https://puretables.com/"><svg xmlns="http://www.w3.org/2000/svg" class="logo-icon" xml:space="preserve" viewBox="0 0 476 448"><defs><clipPath id="a" clipPathUnits="userSpaceOnUse"><path d="M0 336h357V0H0Z"/></clipPath></defs><g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 448)"><path style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M0 0c0-36.727-29.773-66.5-66.5-66.5-36.727 0-66.5 29.773-66.5 66.5 0 36.727 29.773 66.5 66.5 66.5C-29.773 66.5 0 36.727 0 0" transform="translate(139 263.5)"/><path style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M0 0c0-36.727-29.773-66.5-66.5-66.5-36.727 0-66.5 29.773-66.5 66.5 0 36.727 29.773 66.5 66.5 66.5C-29.773 66.5 0 36.727 0 0" transform="translate(348 263.5)"/><path style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M0 0c0-36.727-29.773-66.5-66.5-66.5-36.727 0-66.5 29.773-66.5 66.5 0 36.727 29.773 66.5 66.5 66.5C-29.773 66.5 0 36.727 0 0" transform="translate(348 72.5)"/><path style="fill:#fff;fill-opacity:1;fill-rule:nonzero;stroke:none" d="M0 0c0-36.727-29.773-66.5-66.5-66.5-36.727 0-66.5 29.773-66.5 66.5 0 36.727 29.773 66.5 66.5 66.5C-29.773 66.5 0 36.727 0 0" transform="translate(139 72.5)"/></g></svg> <span class="logo-text">PureTables.com</span></a>
+        <button id="navbar-toggler" aria-label="Toggle navigation">
+            <span class="hamburger-bar"></span><span class="hamburger-bar"></span><span class="hamburger-bar"></span>
+        </button>
+        <div id="navbar-collapsed">
+            <ul id="navbar-menu">
+                <li>
+                    <a href="https://puretables.com/calculators"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" class="menu-icon" viewBox="0 0 460 460" fill="currentColor" style="enable-background:new 0 0 460 460" xml:space="preserve"><path d="M369.635 0H90.365C73.595 0 60 13.595 60 30.365v399.27C60 446.405 73.595 460 90.365 460h279.27c16.77 0 30.365-13.595 30.365-30.365V30.365C400 13.595 386.405 0 369.635 0zM108.204 343.61v-43.196a6.248 6.248 0 0 1 6.248-6.248h43.196a6.248 6.248 0 0 1 6.248 6.248v43.196a6.248 6.248 0 0 1-6.248 6.248h-43.196a6.248 6.248 0 0 1-6.248-6.248zm0-87v-43.196a6.248 6.248 0 0 1 6.248-6.248h43.196a6.248 6.248 0 0 1 6.248 6.248v43.196a6.248 6.248 0 0 1-6.248 6.248h-43.196a6.248 6.248 0 0 1-6.248-6.248zM308.891 421H151.109c-11.046 0-20-8.954-20-20s8.954-20 20-20h157.782c11.046 0 20 8.954 20 20s-8.954 20-20 20zM208.402 294.165h43.196a6.248 6.248 0 0 1 6.248 6.248v43.196a6.248 6.248 0 0 1-6.248 6.248h-43.196a6.248 6.248 0 0 1-6.248-6.248v-43.196a6.248 6.248 0 0 1 6.248-6.248zm-6.248-37.555v-43.196a6.248 6.248 0 0 1 6.248-6.248h43.196a6.248 6.248 0 0 1 6.248 6.248v43.196a6.248 6.248 0 0 1-6.248 6.248h-43.196a6.248 6.248 0 0 1-6.248-6.248zm143.394 93.248h-43.196a6.248 6.248 0 0 1-6.248-6.248v-43.196a6.248 6.248 0 0 1 6.248-6.248h43.196a6.248 6.248 0 0 1 6.248 6.248v43.196a6.248 6.248 0 0 1-6.248 6.248zm0-87h-43.196a6.248 6.248 0 0 1-6.248-6.248v-43.196a6.248 6.248 0 0 1 6.248-6.248h43.196a6.248 6.248 0 0 1 6.248 6.248v43.196a6.248 6.248 0 0 1-6.248 6.248zM354 149.637c0 11.799-9.565 21.363-21.363 21.363H127.364C115.565 171 106 161.435 106 149.637V62.363C106 50.565 115.565 41 127.364 41h205.273C344.435 41 354 50.565 354 62.363v87.274z"></path></svg> Calculators</a>
+                </li>
+                <li>
+                    <a href="https://puretables.com/generators"><svg width="14" height="14" class="menu-icon" viewBox="0 -4 32 32" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><path d="M24.983 8.539V6.054h-4.902l-3.672 5.945-2.099 3.414-3.24 5.256c-.326.51-.889.844-1.53.845H0v-3.568h8.538L12.211 12l2.099-3.414 3.24-5.256a1.812 1.812 0 0 1 1.525-.845h5.904V0l7.417 4.27-7.417 4.27z"></path><path d="m12.902 6.316-.63 1.022-1.468 2.39-2.265-3.675H.001V2.485h9.54a1.813 1.813 0 0 1 1.526.838l.004.007 1.836 2.985zM24.983 24v-2.485h-5.904a1.809 1.809 0 0 1-1.521-.838l-.004-.007-1.836-2.985.63-1.022 1.468-2.39 2.264 3.675h4.902v-2.485l7.417 4.27-7.417 4.27z"></path></svg> Generators</a>
+                </li>
+                <li>
+                    <a href="https://puretables.com/online-tools"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 340.274 340.274" style="enable-background:new 0 0 340.274 340.274" xml:space="preserve" class="menu-icon" fill="currentColor"><path d="m293.629 127.806-5.795-13.739c19.846-44.856 18.53-46.189 14.676-50.08l-25.353-24.77-2.516-2.12h-2.937c-1.549 0-6.173 0-44.712 17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765c-5.362 0-7.446-.006-24.448 45.606l-14.123 5.734C86.848 43.757 71.574 38.19 67.452 38.19l-3.381.105-27.27 26.737c-4.138 3.891-5.582 5.263 15.402 49.425l-5.774 13.691C0 146.097 0 147.838 0 153.33v35.068c0 5.501 0 7.44 46.585 24.127l5.773 13.667c-19.843 44.832-18.51 46.178-14.655 50.032l25.353 24.8 2.522 2.168h2.951c1.525 0 6.092 0 44.685-17.516l14.159 5.758c18.335 45.438 20.218 45.427 25.598 45.427h35.771c5.47 0 7.41 0 24.463-45.589l14.195-5.74c26.014 11 41.253 16.585 45.349 16.585l3.404-.096 27.479-26.901c3.909-3.945 5.278-5.309-15.589-49.288l5.734-13.702c46.496-17.967 46.496-19.853 46.496-25.221V151.88c-.005-5.519-.005-7.446-46.644-24.074zM170.128 228.474c-32.798 0-59.504-26.187-59.504-58.364 0-32.153 26.707-58.315 59.504-58.315 32.78 0 59.43 26.168 59.43 58.315-.006 32.177-26.656 58.364-59.43 58.364z"></path></svg> Online Tools</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-main">
+        <div class="mainSide">
+      
+                  <ol itemscope="" itemtype="https://schema.org/BreadcrumbList" class="breadcrumbsOl">
+                          <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="itemListElement"><a itemprop="item" href="https://puretables.com/" class="breadcrumb-a"><span itemprop="name">PureTables.com</span></a><meta itemprop="position" content="1"></li>
+
+                            
+                                                <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="itemListElement">/ <a itemprop="item" href="https://puretables.com/time-calculators" class="breadcrumb-a"><span itemprop="name">Time Calculators</span></a><meta itemprop="position" content="2"></li>
+                
+                                                  <li itemprop="itemListElement" itemscope="" itemtype="https://schema.org/ListItem" class="itemListElement"><span itemprop="name">/ Playback Speed Calculator</span><meta itemprop="position" content="3"></li>
+                
+                        </ol>
+    <script src="https://puretables.com/assets/js/functions5.js"></script>
+            <div><h1>Playback Speed Calculator</h1></div>
+    
+    <p>Calculate the video or podcast length with the given playback speed.</p>
+
+
+
+<div class="mt-2 mb-4"><!-- pure-top --><ins class="adsbygoogle"
+     style="display:block;"
+     data-ad-client="ca-pub-6962210495069285"
+     data-ad-slot="2151105408"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script></div>
+
+
+<div class="box box2 mw-700">
+
+    <div class="p30">
+
+        <div class="row row-m">
+
+            <div class="col-md-4">
+
+                <div class="m-label"><label>Time</label></div>
+
+            </div>
+
+
+
+            <div class="col-md-8">
+
+                <div class="row">
+
+                    <div class="col-md-4">
+
+                        <label for="hours">Hours</label>
+
+                        <input type="number" class="fin mt-2" id="hours" autocomplete="off" oninput="calculate()">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <label for="minutes">Minutes</label>
+
+                        <input type="number" class="fin mt-2" id="minutes" autocomplete="off" oninput="calculate()">
+
+                    </div>
+
+                    <div class="col-md-4">
+
+                        <label for="seconds">Seconds</label>
+
+                        <input type="number" class="fin mt-2" id="seconds" autocomplete="off" oninput="calculate()">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="row row-m">
+
+            <div class="col-md-4">
+
+                <label class="m-label" for="pSpeed">Playback Speed</label>
+
+            </div>
+
+
+
+            <div class="col-md-8">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <input type="number" class="fin mt-2" step="0.01" id="pSpeed" value="1.25" autocomplete="off" oninput="calculate()">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="result">
+
+        <div class="row row-m">
+
+            <div class="col-md-4">
+
+                <label class="m-label" for="result1">Calculated Time</label>
+
+            </div>
+
+
+
+            <div class="col-md-8">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <input type="text" class="fin mt-2" step="0.01" id="result1" value="00:00:00" autocomplete="off" readonly="">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        
+
+        <div class="row row-m">
+
+            <div class="col-md-4">
+
+                <div class="m-label">
+
+                    <label for="result2">Time Saved</label>
+
+                    <div class="text-sm">How much time can you save at such speed</div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="col-md-8">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+
+                        <input type="text" class="fin mt-2" step="0.01" id="result2" value="00:00:00" autocomplete="off" readonly="">
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+<script src="https://puretables.com/assets/js/tools/playback-speed-calculator-2.min.js"></script>
+
+
+<h2>How to use this calculator?</h2>
+
+
+
+
+
+
+
+<ol>
+
+<li>Enter the total length of the video in hours, minutes, and seconds.</li>
+
+
+
+
+
+
+
+<li>Specify the playback speed for which you want to calculate the total time (e.g. 2, 1.75, 1.5, 1.25, or 0.5).</li>
+
+
+
+
+
+
+
+<li>See the calculated time. Additionally, in the „Time Saved” field, you can also see how much time can you gain or lose while watching the video or listening to the podcast at given speed.</li>
+
+</ol>
+
+
+
+
+
+
+
+<h2>Math formula</h2>
+
+
+
+
+
+
+
+<div class="mathBlock"><strong>Total time in seconds</strong> = [(Hours * 3600) + (Minutes * 60) + Seconds] / Playback Speed</div>
+
+
+
+
+
+
+
+<p><strong>Example:</strong> If I watch one hour long video on 1.5 speed, how much time will it take?</p>
+
+
+
+
+
+
+
+<p>1 hour is equal to 3600 seconds, so:</p>
+
+
+
+
+
+
+
+<div class="mathBlock"><strong>Total time in seconds</strong> = 3600 / 1.5</p>
+
+
+
+
+
+
+
+<p><strong>Total time in seconds</strong> = 2400</p>
+
+
+
+
+
+
+
+<p>To calculate the total time in minutes, divide it by 60:</p>
+
+
+
+
+
+
+
+<p><strong>Total time in minutes </strong>= 2400 / 60 = 40 minutes</div>
+
+
+
+
+
+
+
+<p><strong>Answer: </strong>Watching 1 hour video at 1.5 speed should take 40 minutes</p>
+
+
+
+
+
+
+
+<h2>Examples</h2>
+
+<div class="table-responsive">
+
+    <table class="table table-bordered text-center">
+
+        <thead>
+
+            <tr>
+
+                <th>Time</th>
+
+                <th>Playback Speed</th>
+
+                <th>Calculated time</th>
+
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+
+                <td>00:45:30</td>
+
+                <td>1.5</td>
+
+                <td>00:30:20</td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>00:08:00</td>
+
+                <td>1.25</td>
+
+                <td>00:06:24</td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>00:15:00</td>
+
+                <td>0.75</td>
+
+                <td>00:20:00</td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>01:35:00</td>
+
+                <td>2.25</td>
+
+                <td>00:42:13</td>
+
+            </tr>
+
+
+
+            <tr>
+
+                <td>07:30:00</td>
+
+                <td>1.5</td>
+
+                <td>05:00:00</td>
+
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</div>
+
+
+
+<hr><h2>See Also:</h2><ul class="seeAlsoUl"><li class="mt-3"><a href="https://puretables.com/audiobook-speed-calculator">Audiobook Speed Calculator</a></li><li class="mt-3"><a href="https://puretables.com/words-to-minutes-calculator">Words to Minutes Calculator</a></li><li class="mt-3"><a href="https://puretables.com/time-percentage-calculator">Time Percentage Calculator</a></li></ul>      </div>
+    </div>
+
+    <script>
+      const inputGroupTexts = document.querySelectorAll('.input-group-text');
+      if(inputGroupTexts.length > 0) {
+        inputGroupTexts.forEach(inputGroupText => {
+            inputGroupText.addEventListener('click', function() {
+            const inputElement = this.parentElement.querySelector('input');
+            
+            if (inputElement) {
+                inputElement.focus();
+            }
+            });
+        });
+      }
+    </script>
+
+    <div class="col-right">
+      <div class="rightSide">
+      
+      <div class="sidebarBox">Time Calculators</div><ul class="rightUl"><li><a href="leap-year-calculator" title="Leap Year Calculator">Leap Year Calculator</a></li><li><a href="download-time-calculator" title="Download Time Calculator">Download Time Calculator</a></li><li><a href="age-calculator" title="Age Calculator">Age Calculator</a></li><li><a href="date-calculator" title="Date Calculator">Date Calculator</a></li><li><a href="hours-calculator" title="Hours Calculator">Hours Calculator</a></li><li><a href="time-calculator" title="Time Calculator">Time Calculator</a></li><li><a href="audiobook-speed-calculator" title="Audiobook Speed Calculator">Audiobook Speed Calculator</a></li><li><a href="sleep-calculator" title="Sleep Calculator">Sleep Calculator</a></li><li><a href="zodiac-sign-calculator" title="Zodiac Sign Calculator">Zodiac Sign Calculator</a></li><li><a href="words-to-minutes-calculator" title="Words to Minutes Calculator">Words to Minutes Calculator</a></li><li><a href="seconds-to-time" title="Seconds to HH:MM:SS">Seconds to HH:MM:SS</a></li><li><a href="time-card-calculator" title="Time Card Calculator">Time Card Calculator</a></li></ul>
+        
+        
+        <div class="sidebarBox">
+          PureTables.com        </div>
+        <ul class="rightUl">
+                    <li><a href="https://puretables.com/" title="PureTables.com">PureTables.com</a></li>
+          <li><a href="https://www.facebook.com/puretables/" title="Facebook fanpage" rel="nofollow">Facebook</a></li>
+          <li><a href="https://twitter.com/PureTables_com" title="Twitter" rel="nofollow">Twitter</a></li>
+          <li><a href="https://puretables.com/about" title="About us">About</a></li>
+          <li><a href="https://puretables.com/contact" title="Contact" rel="nofollow">Contact</a></li>
+        </ul>
+
+                      </div>
+    </div>
+  </div>
+</div>
+
+        
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-main">
+          <div class="mainSide2">PureTables.com 2024</div>
+        </div>
+        <div class="col-right">
+          <div class="rightSide2">
+                            <a href="https://puretables.com/privacy-policy" rel="nofollow">Privacy policy</a> | <a href="https://puretables.com/terms-of-use" rel="nofollow">Terms of Use</a> | <a href="https://puretables.com/contact" rel="nofollow">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  </body>
+</html>
